@@ -1,5 +1,7 @@
 from numpy import *
 
+# The python code is corresponding to Week 3 of Operations Analytics class.
+
 # One question with this problem - Why can't we use the confidence interval to justify the probabily of getting a higher data usage than 20?
 def dataplan():
     mu = 23; sigma = 5; N = 100
