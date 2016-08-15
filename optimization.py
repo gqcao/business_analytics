@@ -18,19 +18,20 @@ def zooter():
 def rahat():
     x0 = [10, 10, 10]
     # Objective function
-    fun = lambda x: - 5 * x[0] - 5.3 * x[1]
+    #fun = lambda x: - 5 * x[0] - 5.3 * x[1]
     cons = ({'type': 'ineq', 'fun': lambda x:  150 - .1 *x[0] - .3 * x[1]},
     {'type': 'ineq', 'fun': lambda x: 51.65 - .05 * x[0] - .1 * x[1]},
     {'type': 'ineq', 'fun': lambda x: 14.99 - .03 * x[0] - .02 * x[1]})
     bnds = [(0, None)] * 3
-    res = minimize(fun, x0, method='SLSQP', bounds=bnds,
+    res = minimize(costFunc, x0, method='SLSQP', bounds=bnds,
         constraints=cons)
     print res.x
 
 def costFunc(quant):
     cost_keystone = [105, 135, 153, 110, 140, 137, 130, 132, 115]
     cost_colombi = [15, 21, 17, 23.5, 25.5, 22]
-    cost = cost_colombi 
+    cost_rahat = [-5, -5.3]
+    cost = cost_rahat
     total = sum([(x*y) for x,y in zip(cost, quant)])
     return total
 
@@ -69,10 +70,10 @@ def colombi():
     print("The minimum cost is %s" % (costFunc(x)))
 
 def main():
-    #zooter()
+    zooter()
     #rahat()
     #keystone()
-    colombi()
+    #colombi()
 
 if __name__ == '__main__':
     main()
