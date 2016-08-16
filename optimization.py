@@ -2,7 +2,7 @@ from numpy import *
 from scipy.optimize import minimize 
 
 # The python code is corresponding to Week 2 of Operations Analytics class.
-# The 2nd version is written with class 
+# The updated version is written with class 
 
 class optimization:
     def __init__(self):
@@ -25,6 +25,7 @@ class zooter(optimization):
     def __init__(self):
         self.x0 = [100, 500]
         self.coeff = [-150, -160]
+        # ineq indicates larger than.. 
         self.cons = ({'type': 'ineq', 'fun': lambda x:  5610 - 4*x[0] - 5 * x[1]},
         {'type': 'ineq', 'fun': lambda x: 2200 - 1.5 *x[0] - 2 * x[1]},
         {'type': 'ineq', 'fun': lambda x: 1200 - x[0] - .8 * x[1]})
