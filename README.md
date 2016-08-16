@@ -6,4 +6,4 @@ We present our solution to Week 2 Operations Analytics: Making Best Decisions in
 [optimization.ipynb](optimization.ipynb). 
 
 ### Newsvendor model
-This is the solution to Week 4 Operations Analytics: Wrap-up, and it can be found in [newsvendor.ipynb](newsvendor.ipynb). 
+This is the solution to Week 4 Operations Analytics: Wrap-up, and its Ipython Notebook can be found in [newsvendor.ipynb](newsvendor.ipynb). 
